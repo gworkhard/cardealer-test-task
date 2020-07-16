@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
+    <persistence-unit name="cardealer" transaction-type="RESOURCE_LOCAL">
+
+        <class>com.company.cardealer.entity.Country</class>
+        <class>com.company.cardealer.entity.ExtUser</class>
+        <class>com.company.cardealer.entity.CarMaker</class>
+    </persistence-unit>
+</persistence>

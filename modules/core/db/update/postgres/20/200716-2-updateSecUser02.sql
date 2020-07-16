@@ -1,0 +1,1 @@
+update SEC_USER set DTYPE = 'cardealer_ExtUser' where DTYPE is null ;
