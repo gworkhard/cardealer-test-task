@@ -16,6 +16,10 @@
     <view entity="cardealer_CarMaker" name="carMaker-view" extends="_local">
         <property name="country" view="_minimal"/>
     </view>
+    <view entity="cardealer_CarModel" name="carModel-view" extends="_local">
+        <property name="carMaker" view="_local"/>
+        <property name="equipment" view="_local"/>
+    </view>
 
 
 </views>

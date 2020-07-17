@@ -3,5 +3,7 @@
     <menu id="application-cardealer" insertBefore="administration">
         <item screen="cardealer_Country.browse"/>
         <item screen="cardealer_CarMaker.browse"/>
+        <item screen="cardealer_CarModel.browse"/>
+<!--        <item screen="cardealer_Equipment.browse"/>-->
     </menu>
 </menu-config>

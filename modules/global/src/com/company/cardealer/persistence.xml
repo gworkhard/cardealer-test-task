@@ -5,5 +5,7 @@
         <class>com.company.cardealer.entity.Country</class>
         <class>com.company.cardealer.entity.ExtUser</class>
         <class>com.company.cardealer.entity.CarMaker</class>
+        <class>com.company.cardealer.entity.CarModel</class>
+        <class>com.company.cardealer.entity.Equipment</class>
     </persistence-unit>
 </persistence>
