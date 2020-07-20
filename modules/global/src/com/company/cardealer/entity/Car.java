@@ -1,6 +1,7 @@
 package com.company.cardealer.entity;
 
 import com.haulmont.chile.core.annotations.NamePattern;
+import com.haulmont.chile.core.annotations.NumberFormat;
 import com.haulmont.cuba.core.entity.StandardEntity;
 
 import javax.persistence.*;
@@ -28,6 +29,7 @@ public class Car extends StandardEntity {
     protected String name;
 
 
+    @NumberFormat(pattern = "#")
     @Column(name = "MANUFACTURE_YEAR")
     protected Integer manufactureYear;
 
