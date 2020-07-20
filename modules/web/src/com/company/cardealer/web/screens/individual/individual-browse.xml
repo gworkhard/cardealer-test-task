@@ -2,49 +2,47 @@
 <window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
         xmlns:c="http://schemas.haulmont.com/cuba/screen/jpql_condition.xsd"
         caption="msg://browseCaption"
-        focusComponent="carMakersTable"
-        messagesPack="com.company.cardealer.web.screens.carmaker">
+        focusComponent="individualsTable"
+        messagesPack="com.company.cardealer.web.screens.individual">
     <data readOnly="true">
-        <collection id="carMakersDc"
-                    class="com.company.cardealer.entity.CarMaker"
-                    view="carMaker-view">
-            <loader id="carMakersDl">
+        <collection id="individualsDc"
+                    class="com.company.cardealer.entity.Individual"
+                    view="_local">
+            <loader id="individualsDl">
                 <query>
-                    <![CDATA[select e from cardealer_CarMaker e]]>
+                    <![CDATA[select e from cardealer_Individual e]]>
                 </query>
             </loader>
         </collection>
     </data>
     <dialogMode height="600"
                 width="800"/>
-    <layout expand="carMakersTable"
+    <layout expand="individualsTable"
             spacing="true">
         <filter id="filter"
-                applyTo="carMakersTable"
-                dataLoader="carMakersDl">
+                applyTo="individualsTable"
+                dataLoader="individualsDl">
             <properties include=".*"/>
         </filter>
-        <groupTable id="carMakersTable"
+        <groupTable id="individualsTable"
                     width="100%"
-                    dataContainer="carMakersDc">
+                    dataContainer="individualsDc">
             <actions>
                 <action id="create" type="create"/>
                 <action id="edit" type="edit"/>
                 <action id="remove" type="remove"/>
             </actions>
             <columns>
-                <column id="name"/>
-                <column id="country"/>
-                <column id="code"/>
-                <column id="quantity"
-                        generator="generateCarMakerModelQuantityCell"/>
+                <column id="phoneNumber"/>
+                <column id="firstName"/>
+                <column id="lastName"/>
             </columns>
             <rowsCount/>
             <buttonsPanel id="buttonsPanel"
                           alwaysVisible="true">
-                <button id="createBtn" action="carMakersTable.create"/>
-                <button id="editBtn" action="carMakersTable.edit"/>
-                <button id="removeBtn" action="carMakersTable.remove"/>
+                <button id="createBtn" action="individualsTable.create"/>
+                <button id="editBtn" action="individualsTable.edit"/>
+                <button id="removeBtn" action="individualsTable.remove"/>
             </buttonsPanel>
         </groupTable>
         <hbox id="lookupActions" spacing="true" visible="false">

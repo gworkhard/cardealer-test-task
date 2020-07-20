@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        caption="msg://caption"
+        messagesPack="com.company.cardealer.web.screens.contractor">
+    <layout>
+        <tabSheet id="tabsheet" height="100%" width="100%">
+            <tab id="companiesTab" caption="msg://companiesTab" margin="true">
+                <iframe screen="cardealer_CompanyFragment" id="companiesFrame" height="100%"/>
+            </tab>
+            <tab id="individualsTab" caption="msg://individualsTab" margin="true" lazy="true">
+                <iframe screen="cardealer_IndividualFragment" id="individualsFrame" height="100%"/>
+            </tab>
+        </tabSheet>
+<!--        <iframe id="windowActions" screen="editWindowActions"/>-->
+        <hbox id="lookupActions" spacing="true" visible="true">
+            <button action="lookupSelectAction"/>
+            <button action="lookupCancelAction"/>
+        </hbox>
+    </layout>
+</window>

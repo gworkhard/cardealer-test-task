@@ -75,3 +75,61 @@ create table CARDEALER_EQUIPMENT (
     primary key (ID)
 )^
 -- end CARDEALER_EQUIPMENT
+-- begin CARDEALER_CONTRACTOR
+create table CARDEALER_CONTRACTOR (
+    ID uuid,
+    VERSION integer not null,
+    CREATE_TS timestamp,
+    CREATED_BY varchar(50),
+    UPDATE_TS timestamp,
+    UPDATED_BY varchar(50),
+    DELETE_TS timestamp,
+    DELETED_BY varchar(50),
+    DTYPE varchar(31),
+    --
+    PHONE_NUMBER varchar(255),
+    --
+    primary key (ID)
+)^
+-- end CARDEALER_CONTRACTOR
+-- begin CARDEALER_COMPANY
+create table CARDEALER_COMPANY (
+    ID uuid,
+    --
+    OFFICIAL_NAME varchar(255),
+    INN_AND_ADDRESS text,
+    --
+    primary key (ID)
+)^
+-- end CARDEALER_COMPANY
+-- begin CARDEALER_INDIVIDUAL
+create table CARDEALER_INDIVIDUAL (
+    ID uuid,
+    --
+    FIRST_NAME varchar(255),
+    LAST_NAME varchar(255),
+    --
+    primary key (ID)
+)^
+-- end CARDEALER_INDIVIDUAL
+-- begin CARDEALER_CAR
+create table CARDEALER_CAR (
+    ID uuid,
+    VERSION integer not null,
+    CREATE_TS timestamp,
+    CREATED_BY varchar(50),
+    UPDATE_TS timestamp,
+    UPDATED_BY varchar(50),
+    DELETE_TS timestamp,
+    DELETED_BY varchar(50),
+    --
+    CAR_MAKER_ID uuid,
+    CAR_MODEL_ID uuid,
+    EQUIPMENT_ID uuid,
+    NAME varchar(255),
+    MANUFACTURE_YEAR integer,
+    PRICE decimal(19, 2),
+    --
+    primary key (ID)
+)^
+-- end CARDEALER_CAR

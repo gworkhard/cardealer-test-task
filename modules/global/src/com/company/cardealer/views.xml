@@ -20,6 +20,19 @@
         <property name="carMaker" view="_local"/>
         <property name="equipment" view="_local"/>
     </view>
+    <view entity="cardealer_Car" name="car-view" extends="_local">
+        <property name="carMaker" view="_minimal"/>
+        <property name="carModel" view="_minimal">
+            <property name="carMaker" view="_minimal"/>
+            <property name="equipment" view="_minimal"/>
+        </property>
+        <property name="equipment" view="_minimal">
+            <property name="price"/>
+            <property name="carType"/>
+            <property name="comment"/>
+            <property name="carModel" view="_minimal"/>
+        </property>
+    </view>
 
 
 </views>

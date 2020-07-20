@@ -10,5 +10,6 @@
         <class>com.company.cardealer.entity.Contractor</class>
         <class>com.company.cardealer.entity.Individual</class>
         <class>com.company.cardealer.entity.Company</class>
+        <class>com.company.cardealer.entity.Car</class>
     </persistence-unit>
 </persistence>
