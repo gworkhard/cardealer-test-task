@@ -2,52 +2,49 @@
 <window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
         xmlns:c="http://schemas.haulmont.com/cuba/screen/jpql_condition.xsd"
         caption="msg://browseCaption"
-        focusComponent="contractorsTable"
-        messagesPack="com.company.cardealer.web.screens.contractor">
-
+        focusComponent="ordersTable"
+        messagesPack="com.company.cardealer.web.screens.order">
     <data readOnly="true">
-        <collection id="contractorsDc"
-                    class="com.company.cardealer.entity.Contractor"
-                    view="_local">
-            <loader id="contractorsDl">
+        <collection id="ordersDc"
+                    class="com.company.cardealer.entity.Order"
+                    view="order-view">
+            <loader id="ordersDl">
                 <query>
-                    <![CDATA[select e from cardealer_Contractor e]]>
+                    <![CDATA[select e from cardealer_Order e]]>
                 </query>
             </loader>
         </collection>
     </data>
     <dialogMode height="600"
                 width="800"/>
-    <layout expand="contractorsTable"
+    <layout expand="ordersTable"
             spacing="true">
         <filter id="filter"
-                applyTo="contractorsTable"
-                dataLoader="contractorsDl">
+                applyTo="ordersTable"
+                dataLoader="ordersDl">
             <properties include=".*"/>
         </filter>
-        <groupTable id="contractorsTable"
+        <groupTable id="ordersTable"
                     width="100%"
-                    dataContainer="contractorsDc">
+                    dataContainer="ordersDc">
             <actions>
                 <action id="create" type="create"/>
                 <action id="edit" type="edit"/>
                 <action id="remove" type="remove"/>
-                <action id="excel" type="excel"/>
             </actions>
             <columns>
-                <column id="phoneNumber">
-                    <formatter class="com.company.cardealer.web.screens.PhoneNumberFormatter"/>
-                </column>
-                <column id="quantity"
-                        generator="generateOrdersQuantityCell"/>
+                <column id="car"/>
+                <column id="contractor"/>
+                <column id="isPaid"/>
+                <column id="price"/>
+                <column id="manager"/>
             </columns>
             <rowsCount/>
             <buttonsPanel id="buttonsPanel"
                           alwaysVisible="true">
-                <button id="createBtn" action="contractorsTable.create"/>
-                <button id="editBtn" action="contractorsTable.edit"/>
-                <button id="removeBtn" action="contractorsTable.remove"/>
-                <button id="excelBtn" action="contractorsTable.excel"/>
+                <button id="createBtn" action="ordersTable.create"/>
+                <button id="editBtn" action="ordersTable.edit"/>
+                <button id="removeBtn" action="ordersTable.remove"/>
             </buttonsPanel>
         </groupTable>
         <hbox id="lookupActions" spacing="true" visible="false">

@@ -1,11 +1,12 @@
 package com.company.cardealer.entity;
 
+import com.haulmont.chile.core.annotations.NamePattern;
 import com.haulmont.cuba.core.entity.StandardEntity;
 
 import javax.persistence.*;
 
+@NamePattern("%s|phoneNumber")
 @Inheritance(strategy = InheritanceType.JOINED)
-@DiscriminatorColumn(name = "DTYPE", discriminatorType = DiscriminatorType.STRING)
 @Table(name = "CARDEALER_CONTRACTOR")
 @Entity(name = "cardealer_Contractor")
 public class Contractor extends StandardEntity {

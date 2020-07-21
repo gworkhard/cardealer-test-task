@@ -7,7 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
-@NamePattern("%s|firstName")
+@NamePattern("%s|phoneNumber")
 @PrimaryKeyJoinColumn(name = "ID", referencedColumnName = "ID")
 @Table(name = "CARDEALER_INDIVIDUAL")
 @Entity(name = "cardealer_Individual")

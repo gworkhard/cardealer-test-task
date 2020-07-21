@@ -31,11 +31,16 @@
                 <action id="create" type="create"/>
                 <action id="edit" type="edit"/>
                 <action id="remove" type="remove"/>
+                <action id="excel" type="excel"/>
             </actions>
             <columns>
-                <column id="phoneNumber"/>
+                <column id="phoneNumber">
+                    <formatter class="com.company.cardealer.web.screens.PhoneNumberFormatter"/>
+                </column>
                 <column id="firstName"/>
                 <column id="lastName"/>
+                <column id="quantity"
+                        generator="generateOrdersQuantityCell"/>
             </columns>
             <rowsCount/>
             <buttonsPanel id="buttonsPanel"
@@ -43,6 +48,7 @@
                 <button id="createBtn" action="individualsTable.create"/>
                 <button id="editBtn" action="individualsTable.edit"/>
                 <button id="removeBtn" action="individualsTable.remove"/>
+                <button id="excelBtn" action="individualsTable.excel"/>
             </buttonsPanel>
         </groupTable>
         <hbox id="lookupActions" spacing="true" visible="false">

@@ -14,6 +14,9 @@
                 <entry key="cardealer_CountryService" value="com.company.cardealer.service.CountryService"/>
                 <entry key="cardealer_CarMakerModelsService"
                        value="com.company.cardealer.service.CarMakerModelsService"/>
+                <entry key="cardealer_OrdersCountService" value="com.company.cardealer.service.OrdersCountService"/>
+                <entry key="cardealer_UnsoldOrUnpaidCarService"
+                       value="com.company.cardealer.service.UnsoldOrUnpaidCarService"/>
             </map>
         </property>
     </bean>

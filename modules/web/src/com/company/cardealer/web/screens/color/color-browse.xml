@@ -2,53 +2,46 @@
 <window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
         xmlns:c="http://schemas.haulmont.com/cuba/screen/jpql_condition.xsd"
         caption="msg://browseCaption"
-        focusComponent="companiesTable"
-        messagesPack="com.company.cardealer.web.screens.company">
+        focusComponent="colorsTable"
+        messagesPack="com.company.cardealer.web.screens.color">
     <data readOnly="true">
-        <collection id="companiesDc"
-                    class="com.company.cardealer.entity.Company"
+        <collection id="colorsDc"
+                    class="com.company.cardealer.entity.Color"
                     view="_local">
-            <loader id="companiesDl">
+            <loader id="colorsDl">
                 <query>
-                    <![CDATA[select e from cardealer_Company e]]>
+                    <![CDATA[select e from cardealer_Color e]]>
                 </query>
             </loader>
         </collection>
     </data>
     <dialogMode height="600"
                 width="800"/>
-    <layout expand="companiesTable"
+    <layout expand="colorsTable"
             spacing="true">
         <filter id="filter"
-                applyTo="companiesTable"
-                dataLoader="companiesDl">
+                applyTo="colorsTable"
+                dataLoader="colorsDl">
             <properties include=".*"/>
         </filter>
-        <groupTable id="companiesTable"
+        <groupTable id="colorsTable"
                     width="100%"
-                    dataContainer="companiesDc">
+                    dataContainer="colorsDc">
             <actions>
                 <action id="create" type="create"/>
                 <action id="edit" type="edit"/>
                 <action id="remove" type="remove"/>
-                <action id="excel" type="excel"/>
             </actions>
             <columns>
-                <column id="phoneNumber">
-                    <formatter class="com.company.cardealer.web.screens.PhoneNumberFormatter"/>
-                </column>
-                <column id="officialName"/>
-                <column id="innAndAddress"/>
-                <column id="quantity"
-                        generator="generateOrdersQuantityCell"/>
+                <column id="name"/>
+                <column id="code"/>
             </columns>
             <rowsCount/>
             <buttonsPanel id="buttonsPanel"
                           alwaysVisible="true">
-                <button id="createBtn" action="companiesTable.create"/>
-                <button id="editBtn" action="companiesTable.edit"/>
-                <button id="removeBtn" action="companiesTable.remove"/>
-                <button id="excelBtn" action="companiesTable.excel"/>
+                <button id="createBtn" action="colorsTable.create"/>
+                <button id="editBtn" action="colorsTable.edit"/>
+                <button id="removeBtn" action="colorsTable.remove"/>
             </buttonsPanel>
         </groupTable>
         <hbox id="lookupActions" spacing="true" visible="false">

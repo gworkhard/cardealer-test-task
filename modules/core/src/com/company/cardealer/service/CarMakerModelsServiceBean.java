@@ -30,7 +30,6 @@ public class CarMakerModelsServiceBean implements CarMakerModelsService {
             EntityManager em = persistence.getEntityManager();
             TypedQuery<CarModel> query = em.createQuery(
                     "select c from cardealer_CarModel c where c.carMaker.id = :carMakerId", CarModel.class);
-            query.setView(metadata.getViewRepository().getView(CarModel.class, View.MINIMAL));
             query.setParameter("carMakerId", carMaker.getId());
             List<CarModel> resultList = query.getResultList();
             tx.commit();

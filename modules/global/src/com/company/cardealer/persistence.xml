@@ -11,5 +11,7 @@
         <class>com.company.cardealer.entity.Individual</class>
         <class>com.company.cardealer.entity.Company</class>
         <class>com.company.cardealer.entity.Car</class>
+        <class>com.company.cardealer.entity.Order</class>
+        <class>com.company.cardealer.entity.Color</class>
     </persistence-unit>
 </persistence>

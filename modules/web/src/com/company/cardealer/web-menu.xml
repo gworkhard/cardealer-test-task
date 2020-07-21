@@ -4,11 +4,13 @@
         <item screen="cardealer_Country.browse"/>
         <item screen="cardealer_CarMaker.browse"/>
         <item screen="cardealer_CarModel.browse"/>
-<!--        <item screen="cardealer_ContractorScreen"/>-->
         <item screen="cardealer_Individual.browse"/>
         <item screen="cardealer_Company.browse"/>
         <item screen="cardealer_Contractor.browse"/>
         <item screen="cardealer_Car.browse"/>
+        <item screen="cardealer_Order.browse"/>
+        <item screen="cardealer_Color.browse"/>
         <!--        <item screen="cardealer_Equipment.browse"/>-->
+<!--        <item screen="cardealer_ContractorScreen"/>-->
     </menu>
 </menu-config>

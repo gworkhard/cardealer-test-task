@@ -33,6 +33,11 @@
             <property name="carModel" view="_minimal"/>
         </property>
     </view>
+    <view entity="cardealer_Order" name="order-view" extends="_local">
+        <property name="car" view="_minimal"/>
+        <property name="contractor" view="_minimal"/>
+        <property name="manager" view="_minimal"/>
+    </view>
 
 
 </views>
